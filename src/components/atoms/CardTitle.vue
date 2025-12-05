@@ -9,5 +9,3 @@ defineProps<{
     {{ title }}
   </h3>
 </template>
-
-<style scoped></style>
