@@ -1,20 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import CustomButton from '../atoms/CustomButton.vue'
+import { useModal } from '@/composables/modal'
 import LandingHeadder from '../atoms/LandingHeadder.vue'
 import LandingSubHeadder from '../atoms/LandingSubHeadder.vue'
-import CustomModal from '../molecules/CustomModal.vue'
+import CustomButton from '../atoms/CustomButton.vue'
 
-const isModalOpen = ref(false)
-
-function openModal() {
-  isModalOpen.value = true
-}
-
-function handleSpotifyLogin() {
-  isModalOpen.value = false
-  console.log('Spotify login initiated')
-}
+const { openModal } = useModal()
 </script>
 
 <template>
@@ -27,10 +17,5 @@ function handleSpotifyLogin() {
       />
       <CustomButton @click="openModal" msg="Get Started with Spotify" />
     </div>
-    <CustomModal
-      :isOpen="isModalOpen"
-      @update:isOpen="(value: boolean) => (isModalOpen = value)"
-      @login="handleSpotifyLogin"
-    />
   </section>
 </template>

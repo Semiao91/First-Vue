@@ -1,3 +1,4 @@
+import DashboardView from '@/views/DashboardView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from '../layouts/LandingPage.vue'
 import HomeView from '../views/HomeView.vue'
@@ -13,13 +14,13 @@ const router = createRouter({
           path: '',
           name: 'home',
           component: HomeView,
-        },
-        {
-          path: 'about',
-          name: 'about',
-          component: () => import('../views/AboutView.vue'),
-        },
+        }
       ],
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: DashboardView,
     },
   ],
 })

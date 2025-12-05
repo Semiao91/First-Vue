@@ -1,19 +1,9 @@
 <script setup lang="ts">
+import { useModal } from '@/composables/modal'
 import { Music2 } from 'lucide-vue-next'
 import CustomButton from '../atoms/CustomButton.vue'
 
-defineProps<{
-  isOpen: boolean
-}>()
-
-const emit = defineEmits<{
-  login: []
-  'update:isOpen': [value: boolean]
-}>()
-
-function handleSpotifyLogin() {
-  emit('login')
-}
+const { openModal } = useModal()
 </script>
 
 <template>
@@ -24,13 +14,8 @@ function handleSpotifyLogin() {
           <Music2 class="h-6 w-6 text-primary" />
           <span class="text-xl font-bold text-foreground">RateBox</span>
         </div>
-        <CustomButton @click="handleSpotifyLogin" msg="Login with Spotify" />
+        <CustomButton @click="openModal" msg="Login with Spotify" />
       </div>
-      <CustomModal
-        :isOpen="isOpen"
-        @update:isOpen="(value: boolean) => emit('update:isOpen', value)"
-        @login="handleSpotifyLogin"
-      />
     </div>
   </header>
 </template>
