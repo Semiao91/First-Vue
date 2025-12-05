@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import CardFeatures from '@/components/organisms/CardFeatures.vue'
+import HeroSection from '@/components/organisms/HeroSection.vue'
+</script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="home-view">
+    <HeroSection />
+    <CardFeatures />
+  </div>
 </template>
