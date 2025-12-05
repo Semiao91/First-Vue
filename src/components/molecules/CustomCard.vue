@@ -1,22 +1,23 @@
 <script setup lang="ts">
-import { FwbCard } from 'flowbite-vue'
+import type { Component } from 'vue'
 import CardSubtitle from '../atoms/CardSubtitle.vue'
 import CardTitle from '../atoms/CardTitle.vue'
-import CustomButton from '../atoms/CustomButton.vue'
 
 defineProps<{
-  msg: string
+  icon: Component
   title: string
   subtitle: string
 }>()
 </script>
 
 <template>
-  <fwb-card href="#" class="w-sm p-5 rounded-xl bg-card border-none">
+  <div class="flex flex-col items-center text-center p-6 rounded-lg bg-card border border-border">
+    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 mb-4">
+      <component :is="icon" class="h-6 w-6 text-primary" />
+    </div>
     <CardTitle :title="title" />
     <CardSubtitle :subtitle="subtitle" />
-    <CustomButton :msg="msg" />
-  </fwb-card>
+  </div>
 </template>
 
 <style scoped></style>

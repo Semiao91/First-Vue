@@ -5,9 +5,9 @@ defineProps<{
 </script>
 
 <template>
-  <h5 class="mb-2 text-2xl font-bold tracking-tight text-primary-foreground">
+  <h3 class="text-xl font-semibold text-card-foreground mb-2">
     {{ title }}
-  </h5>
+  </h3>
 </template>
 
 <style scoped></style>

@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <p class="text-muted-foreground mb-3 font-normal">
+  <p class="text-muted-foreground leading-relaxed">
     {{ subtitle }}
   </p>
 </template>
