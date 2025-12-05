@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import CustomCard from './components/molecules/CustomCard.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <div class="bg-background min-h-screen">
+    <header>
+      <div class="wrapper">
+        <CustomCard title="Title" subtitle="Subtitle" msg="Oh!" />
+      </div>
+    </header>
 
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <style scoped></style>
