@@ -4,7 +4,7 @@ import HeroSection from '@/components/organisms/HeroSection.vue'
 </script>
 
 <template>
-  <div class="home-view">
+  <div>
     <HeroSection />
     <CardFeatures />
   </div>

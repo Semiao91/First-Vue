@@ -9,5 +9,3 @@ defineProps<{
     {{ subtitle }}
   </p>
 </template>
-
-<style scoped></style>
