@@ -11,7 +11,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <header class="border-b border-border">
+  <header class="border-border">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div v-if="route.path !== '/dashboard'" class="flex h-16 items-center justify-between">
         <div class="flex items-center gap-2">
