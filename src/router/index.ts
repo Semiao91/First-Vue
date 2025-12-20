@@ -27,13 +27,21 @@ const router = createRouter({
           name: 'dashboard',
           component: DashboardView,
         },
-
-        // Add more dashboard routes here
-        // {
-        //   path: 'settings',
-        //   name: 'dashboard-settings',
-        //   component: () => import('../views/SettingsView.vue'),
-        // },
+        {
+          path: '/dashboard/album-reviews',
+          name: 'album-reviews',
+          component: DashboardView,
+        },
+        {
+          path: '/dashboard/artist-reviews',
+          name: 'artist-reviews',
+          component: DashboardView,
+        },
+        {
+          path: '/dashboard/track-reviews',
+          name: 'track-reviews',
+          component: DashboardView,
+        },
       ],
     },
   ],

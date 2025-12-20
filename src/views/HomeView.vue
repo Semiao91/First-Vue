@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import CardFeatures from '@/components/organisms/CardFeatures.vue'
-import HeroSection from '@/components/organisms/HeroSection.vue'
+import CardFeatures from '@/components/organisms/CardFeatures.vue';
+import HeroSection from '@/components/organisms/HeroSection.vue';
 </script>
 
 <template>

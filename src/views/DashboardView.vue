@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DashboardStats from '@/components/organisms/DashboardStats.vue';
+</script>
 
 <template>
-  <div></div>
+  <DashboardStats />
 </template>

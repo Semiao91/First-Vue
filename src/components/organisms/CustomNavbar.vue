@@ -5,7 +5,7 @@ import { FwbAvatar } from 'flowbite-vue'
 import { useRoute } from 'vue-router'
 import CustomButton from '../atoms/CustomButton.vue'
 import CustomLogo from '../atoms/CustomLogo.vue'
-
+import SearchBar from '../atoms/SearchBar.vue'
 const { openModal } = useModal()
 const route = useRoute()
 </script>
@@ -20,7 +20,8 @@ const route = useRoute()
         </div>
         <CustomButton @click="openModal" msg="Login" />
       </div>
-      <div v-else class="flex h-16 items-center justify-end">
+      <div v-else class="flex h-16 items-center justify-between">
+        <SearchBar />
         <fwb-avatar :img="avatar" rounded bordered status-position="bottom-right" status="online" />
       </div>
     </div>

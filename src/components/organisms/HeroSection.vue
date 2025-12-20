@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { useModal } from '@/composables/modal'
+import { useToastStore } from '@/stores/useToastStore'
+import CustomButton from '../atoms/CustomButton.vue'
 import LandingHeadder from '../atoms/LandingHeadder.vue'
 import LandingSubHeadder from '../atoms/LandingSubHeadder.vue'
-import CustomButton from '../atoms/CustomButton.vue'
+// const { openModal } = useModal()
+const toast = useToastStore()
 
-const { openModal } = useModal()
+const openModal = () => {
+  toast.success('Modal functionality is not implemented yet.')
+}
 </script>
 
 <template>
@@ -13,8 +17,7 @@ const { openModal } = useModal()
       <LandingHeadder headding="Rate your music library, track your taste" tag="h1" />
       <LandingSubHeadder
         headding="Connect to Spotify, import your favorite artists and albums, and create a personalized rating catalog. Discover patterns in your musical journey."
-        tag="h4"
-      />
+        tag="h4" />
       <CustomButton @click="openModal" msg="Get Started with Spotify" />
     </div>
   </section>
